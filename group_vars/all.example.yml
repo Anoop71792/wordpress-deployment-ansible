@@ -1,0 +1,60 @@
+
+---
+# ==========================================================
+# WordPress Deployment using Ansible
+# Example configuration file
+# Replace CHANGE_ME values before deployment.
+# ==========================================================
+
+# Website / Linux SFTP User
+web_user: "Anoop"
+web_user_password: "CHANGE_ME"
+
+site_name: "myblog"
+
+# Leave empty to auto-detect EC2 public IP
+site_host: ""
+
+# Database Configuration
+db_name: "wordpress"
+db_user: "wpuser"
+db_password: "CHANGE_ME"
+
+# phpMyAdmin Configuration
+pma_basic_auth_enabled: true
+pma_basic_user: "pmaadmin"
+pma_basic_password: "CHANGE_ME"
+
+# WordPress Configuration
+wp_title: "Anoop's Blog"
+wp_tagline: "Notes on Linux, DevOps and Cloud (AWS)"
+wp_admin_user: "wpadmin"
+wp_admin_password: "CHANGE_ME"
+wp_admin_email: "your-email@example.com"
+wp_timezone: "Asia/Kolkata"
+
+# Initial Blog Post
+wp_post_title: "Hello, I'm Anoop H"
+wp_post_slug: "about-me"
+
+# MariaDB Configuration
+mariadb_install_source: "mariadb_org"
+mariadb_version: "10.6"
+
+# PHP Configuration
+php_version: "8.2"
+
+# SSL Configuration
+# Self-signed certificate validity in days
+ssl_days: 365
+
+# phpMyAdmin Download
+phpmyadmin_url: "https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz"
+
+# ==========================================================
+# Derived Paths - Do Not Modify
+# ==========================================================
+
+web_home: "/home/{{ web_user }}"
+site_root: "/home/{{ web_user }}/{{ site_name }}"
+web_root: "/home/{{ web_user }}/{{ site_name }}/public"

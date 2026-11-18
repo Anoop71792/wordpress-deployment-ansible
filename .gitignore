@@ -1,0 +1,48 @@
+
+# Private Ansible Configuration
+group_vars/all.yml
+inventory/hosts.ini
+
+# Ansible Vault Password Files
+.vault_pass
+.vault-password
+.vault_password
+
+# SSH Private Keys
+*.pem
+*.key
+*.ppk
+id_rsa
+id_ed25519
+
+# Ansible Temporary Files
+*.retry
+*.log
+
+# Environment Variables and Secrets
+.env
+.env.*
+!.env.example
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary and Backup Files
+*.bak
+*.tmp
+*~
